@@ -1,0 +1,134 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif, sans-serif;
+    margin: 10px;
+    padding: 0;
+    margin: 0 auto; /* Центрируем контент по горизонтали */
+    background-color:#fff
+}
+
+
+header {
+    background-color: #333;
+    color: #fff;
+    justify-content: space-between;
+    text-align: center;
+    padding: 10px;
+}
+
+main {
+    min-height: calc(100vh - (высота вашей шапки + высота вашего футера));
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+}
+
+.top {
+    margin: 10px;
+}
+
+
+/* Стили для мобильных устройств (ширина до 600px) */
+@media only screen and (max-width: 600px) {
+    /* Ваши стилевые правила для мобильных устройств здесь */
+    body {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    /* Пример: убрать боковые отступы для узких экранов */
+    #city-container {
+        margin: 0;
+    }
+}
+
+/* Стили для планшетов (ширина от 601px до 768px) */
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+    /* Ваши стилевые правила для планшетов здесь */
+}
+
+/* Другие медиа-запросы по мере необходимости */
+
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    background-color: #444;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+    display: block;
+    transition: color 0.3s ease; /* Изменено для анимации цвета текста */
+}
+
+
+
+nav a:hover {
+    color: #ffcc00; /* Изменено на желтый цвет, можно выбрать другой цвет по вашему вкусу */
+}
+
+main {
+    padding: 20px;
+}
+
+.flex-center {
+    text-align: center;
+}
+
+
+#city-container {
+    display: flex;
+    overflow-x: auto; /* Добавляем горизонтальную прокрутку */
+    gap: 10px; /* Опционально: добавляем промежуток между карточками */
+    scroll-snap-type: x mandatory; /* Добавляем скролл-стоп по горизонтали */
+}
+
+.city-card {
+    flex: 0 0 auto;
+    width: 200px; /* Ширина каждой карточки */
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden; /* Обрезаем изображение, если оно выходит за границы */
+    scroll-snap-align: start; /* Обеспечиваем выравнивание по границе для scroll-snap */
+
+}
+
+.city-card img {
+    width: 100%;
+    height: auto;
+}
+
+ul {
+    line-height: 1.5; /* Выберите значение, которое соответствует вашим предпочтениям */
+}
+
+@media screen and (max-width: 600px) {
+    header {
+        /* Ваши стили для мобильных устройств */
+        /* Например, можно уменьшить размер текста, изменить высоту шапки и т.д. */
+    }
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin-top: 20px; /* Или другой подходящий отступ */
+    position: relative;
+    z-index: 2;
+}
